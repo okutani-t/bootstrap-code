@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Bootstrap image uploadテスト</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  .container {
+    /*width: 980px;*/
+    /*max-width: none !important;*/
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <h2>デフォルトのfileアップロードフォーム</h2>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">● 〇〇MBまでの画像をアップロードできるよ！</p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <h2>Bootstrapっぽくした<br>fileアップロードフォーム</h2>
+    <br>
+
+    <input id="lefile" type="file" style="display:none">
+    <div class="input-group">
+      <input type="text" id="photoCover" class="form-control" placeholder="select file...">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="$('input[id=lefile]').click();">Browse</button>
+      </span>
+    </div>
+    <p class="help-block">● 〇〇MBまでの画像をアップロードできるよ！</p>
+
+    <h2>アイコンを使った<br>fileアップロードフォーム</h2>
+
+    <input id="lefile" type="file" style="display:none">
+    <div class="input-group">
+      <input type="text" id="photoCover" class="form-control" placeholder="select file...">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="$('input[id=lefile]').click();">
+          <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+    <p class="help-block">● 〇〇MBまでの画像をアップロードできるよ！</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+  $('input[id=lefile]').change(function() {
+    $('#photoCover').val($(this).val().replace("C:\\fakepath\\", ""));
+  });
+  </script>
+</body>
+</html>

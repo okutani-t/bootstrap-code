@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="header" class="container" style="background:red;">header</div>
+
+  <div class="container" style="padding: 20px 10px">
+    <h1>Modal</h1>
+    <a data-toggle="modal" href="#my-modal" class="btn btn-primary">Show me!</a>
+
+    <div class="modal fade" id="my-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">My Modal</h4>
+          </div>
+          <div class="modal-body">
+            <p>こんにちは！</p>
+            <p>こんにちは！</p>
+            <p>こんにちは！</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal">OK!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Tabメニュー</h2>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#home" data-toggle="tab">HOME</a></li>
+      <li><a href="#about" data-toggle="tab">ABOUT</a></li>
+      <li><a href="#work" data-toggle="tab">WORK</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="home"><h1>ホームです</h1></div>
+      <div class="tab-pane fade" id="about"><h1>アバウトです</h1></div>
+      <div class="tab-pane fade" id="work"><h1>ワークです</h1></div>
+    </div>
+
+    <h2>ツールチップとポップオーバー</h2>
+
+    <p style="font-size: 20px;"><a href="#" data-toggle="tooltip" title="説明">this</a> and <a href="#" data-toggle="popover" title="説明2" data-content="さらに説明！">that</a></p>
+
+  </div>
+
+  <div id="footer" class="container" style="background:blue;">footer</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  $(function() {
+    $("[data-toggle=tooltip]").tooltip({
+      placement: "bottom"
+    });
+    $("[data-toggle=popover]").popover();
+  });
+  </script>
+</body>
+</html>
